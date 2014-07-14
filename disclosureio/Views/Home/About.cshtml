@@ -1,0 +1,22 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<disclosureio.ViewModels.AboutViewModel>
+@{
+    Layout = "Layout/Base.cshtml";
+    ViewBag.Title = "disclosure.io - About";
+}
+    <div class="container" role="main">
+        <div class="page-header">
+            <h1>About Disclosure.io</h1>
+        </div>
+        <p>Disclosure.io is administered and moderated by trusted volunteers.</p>
+        <h2>Admins</h2>
+        <p>Administrators are tasked with approving new Disclosures for public viewing, and </p>
+        @foreach (var user in Model.Admins)
+        {
+            <p>@user.Name</p>
+        }
+        <h2>Moderators</h2>        
+        @foreach (var user in Model.Moderators)
+        {
+            <p>@user.Name</p>
+        }
+    </div>

@@ -1,17 +1,26 @@
-﻿@{
-    Layout = null;
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<disclosureio.ViewModels.BaseViewModel>
+@{
+    Layout = "Layout/Base.cshtml";
+    ViewBag.Title = "disclosure.io - Community-powered disclosure";
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-    Test?!?
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            <h1>Community-powered disclosure</h1>
+            <p>This is a template that shows how closely I've copied Bootstrap's default.</p>
+            <p><a href="/disclosures" class="btn btn-primary btn-lg" role="button">See open Disclosures &raquo;</a></p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>What are vulnerabilities?</h2>
+                <p>Software and hardware nowadays are complex and frequently have bugs, mistakes, or oversights. When one of these flaws reduces the security of a system, it's called a vulnerability. It can be as innocent as <a href="http://www.businessinsider.com/tweetdeck-major-security-vulnerability-twitter-2014-6">a viral Twitter retweet</a> to <a href="https://heartbleed.com">stealing private information from hundreds of thousands of servers</a>.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Responsible disclosure</h2>
+                <p>Researchers often find vulnerabilities in programs, websites, and even hardware systems like traffic lights. Responsible disclosure means the researcher should make every effort to tell whomever's responsible about the bug before telling the public about it.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Disclosure.io?</h2>
+                <p>Sometimes finding who's responsible isn't so easy. With big companies it can be hard to find someone who can acknowledge fix the problem. Disclosure.io makes it easy for volunteers to help get in touch with these companies on behalf of the researcher, promoting the use of responsible disclosure.</p>
+            </div>
+        </div>
     </div>
-</body>
-</html>

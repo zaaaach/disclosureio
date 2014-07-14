@@ -1,4 +1,5 @@
-﻿using Nancy;
+﻿using disclosureio.ViewModels;
+using Nancy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,16 @@ namespace disclosureio.Modules
     {
         public HomeModule()
         {
-            Get["/"] = parameters =>
+            Get["/"] = _ =>
             {
-                return View["Index"];
+                return View["Index", new BaseViewModel("Home")];
             };
+            Get["/about"] = About;
+        }
+
+        private dynamic About(dynamic _)
+        {
+            return View["About", new AboutViewModel()];
         }
     }
 }
