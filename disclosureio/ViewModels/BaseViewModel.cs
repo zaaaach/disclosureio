@@ -14,10 +14,13 @@ namespace disclosureio.ViewModels
 
         public string CurrentPage { get; set; }
 
+        public bool DiagnosticsEnabled { get; set; }
+
         public BaseViewModel(string pageName)
         {
             CurrentPage = pageName;
             UserPermission = UserPermissionEnum.Anonymous;
+            DiagnosticsEnabled = Properties.Settings.Default.DiagnosticsEnabled;
         }
     }
 }

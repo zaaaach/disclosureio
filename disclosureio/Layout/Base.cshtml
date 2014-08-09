@@ -50,6 +50,10 @@
                                 {
                                     <li class="divider"></li>
                                     <li><a href="/admin">Admin</a></li>
+                                    if (Model.DiagnosticsEnabled)
+                                    {
+                                        <li><a href="/admin/diagnostics">Diagnostics</a></li>
+                                    }
                                 }
                                 <li class="divider"></li>
                                 <li><a href="#">Sign out</a></li>
